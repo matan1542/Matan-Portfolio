@@ -11,9 +11,9 @@ function getBooksForDisplay() {
 
 function getImgsForDisplay() {
     var gPhotos = {
-        'Harry Potter': '../img/secondBook.webp',
-        'Game of thrones': '../img/fourBook.jpg',
-        'Lord of the rings': '../img/firstBook.webp'
+        'Harry Potter': 'img/secondBook.webp',
+        'Game of thrones': 'img/fourBook.jpg',
+        'Lord of the rings': 'img/firstBook.webp'
     }
 
     return gPhotos;
