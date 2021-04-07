@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch-Nums</title>
+    <link rel="stylesheet" href="css/board.css">
+</head>
+<body>
+    <h1 class="head-line">Touch-Nums</h1>
+    <div class="levelContainer">
+        
+            <h4>Choose your level</h4>
+            <input type="radio" name="team" class="radio-buttons"  id="level16">Easy(16)
+            <input type="radio"  name="team" class="radio-buttons"  id="level25">Hard(25)
+             <input type="radio" name="team" class="radio-buttons"  id="level36">Extreme(36) <br>
+            <button class="confirm" onclick="startOver()">Start</button>
+         
+    </div>
+    <h5 >This is your time: <span class="time"></span> </h5>
+    <table class="board-num" cellpadding="10">
+        <tbody class="board">
+
+        </tbody>
+    </table>
+    <script src="cell.js"></script>
+</body>
+</html>
