@@ -13,18 +13,18 @@ function renderProtfolio() {
     var projects = getProjects();
     var $elRow = $('.projects-section');
     var strPortfolio = projects.map((project) => {
-        return `<div class="col-md-4 col-sm-6 portfolio-item">
+        return `<div class="col-md-4 col-sm-6 portfolio-item protfolio-container">
         <a class="portfolio-link" data-toggle="modal" data-proj-id ="${project.id}" href="#portfolioModal1">
         <div class="portfolio-hover">
          <div class="portfolio-hover-content">
          <i class="fa fa-plus fa-3x"></i>
          </div>
           </div>
-         <img  class="img-fluid" src="img/portfolio/${project.imgUrl}.png" alt="">
+         <img style = "height:300px; width:100%;     object-fit: cover;" class="img-fluid" src="img/portfolio/${project.imgUrl}.png" alt="">
             </a>
         <div class="portfolio-caption">
             <h4>${project.title}</h4>
-             <p class="text-muted">Photography</p>
+             <p class="text-muted">Apps</p>
             </div>
         </div>  `
 
@@ -49,7 +49,7 @@ function renderModal(id) {
             <p> ${project.desc}</p>
             <ul class="list-inline">
                 <li>Date: ${d.getMonth()}/${d.getFullYear()}</li>
-             <a href="${project.url}"><span class="modal-span-color">Enter into the game: </span></span>${project.title}</a>
+             <a  href="${project.url}" class="btn btn-primary" target="_blank><span  modal-span-color">Enter into the: </span></span>${project.title}</a>
               
             </ul>
             <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -63,7 +63,7 @@ function renderModal(id) {
 function contactMessage() {
     $('.btn-contact').click(() => {
         $('.body-input').val();
-        $('.subject-input').val();
+        $('.subject-input').val(); 
         window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=matan8380@gmail.com&su=${$('.subject-input').val()}&body=${$('.body-input').val()}`);
         $('.body-input').val('');
         $('.subject-input').val('');
